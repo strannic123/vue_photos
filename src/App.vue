@@ -23,15 +23,18 @@ export default {
   components: {
     Layout,
   },
-  data() {
-    return {
-      albums: []
-    }
-  },
+
 
   async created() {
-
+    this.$store.dispatch('albums/fetchAlbums')
   },
+
+  computed: {
+    albums(){
+      return this.$store.state.albums.all
+
+    }
+  }
 
 
 }
