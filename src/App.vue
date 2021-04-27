@@ -21,12 +21,16 @@ export default {
   components: {
     Layout,
   },
-  created() {
-    console.log(this.$store.state)
-  }
+
 }
 </script>
 
 <style>
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
 
 </style>
