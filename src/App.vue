@@ -3,8 +3,10 @@
     <template v-slot:header>
       Header
     </template>
-    <template v-slot:sidebar>
-      Sidebar
+    <template v-slot:sidebar >
+      <div v-for="album in albums">
+        {{album.title}}
+      </div>
     </template>
     <template v-slot:content>
       Content
@@ -21,6 +23,16 @@ export default {
   components: {
     Layout,
   },
+  data() {
+    return {
+      albums: []
+    }
+  },
+
+  async created() {
+
+  },
+
 
 }
 </script>
