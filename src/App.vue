@@ -4,24 +4,29 @@
       Header
     </template>
     <template v-slot:sidebar >
-      <div v-for="album in albums">
-        {{album.title}}
-      </div>
+      <album
+          v-for="album in albums"
+          :album="album"
+      >
+
+      </album>
     </template>
     <template v-slot:content>
-      Content
+      <img v-for="photo in currentAlbumPhotos" :src="photo.thumbnailUrl" >
     </template>
   </layout>
 </template>
 
 <script>
 import Layout from "./components/Layout";
+import Album from "./components/Album";
 
 
 export default {
   name: 'App',
   components: {
     Layout,
+    Album
   },
 
 
@@ -30,6 +35,9 @@ export default {
   },
 
   computed: {
+    currentAlbumPhotos(){
+      return this.$store.state.photos.currentAlbumPhotos
+    },
     albums(){
       return this.$store.state.albums.all
 
