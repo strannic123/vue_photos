@@ -1,11 +1,19 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import PhotoApp from "../views/PhotoApp";
+import PhotoView from "../views/PhotoView";
 
 const routes = [
   {
     name: 'root',
     path: '/',
-    component: PhotoApp
+    component: PhotoApp,
+    children: [
+      {
+        name: 'photos',
+        path: '/albums/:id',
+        component: PhotoView,
+      }
+    ]
   }
 
 ]

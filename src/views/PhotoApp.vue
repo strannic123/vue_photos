@@ -12,7 +12,8 @@
       </album>
     </template>
     <template v-slot:content>
-      <img v-for="photo in currentAlbumPhotos" :src="photo.thumbnailUrl" >
+      <router-view/>
+
     </template>
   </layout>
 </template>
@@ -35,9 +36,6 @@ export default {
   },
 
   computed: {
-    currentAlbumPhotos(){
-      return this.$store.state.photos.currentAlbumPhotos
-    },
     albums(){
       return this.$store.state.albums.all
 
