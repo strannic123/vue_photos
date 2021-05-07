@@ -1,7 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
-
+import PhotoApp from "../views/PhotoApp";
 
 const routes = [
+  {
+    name: 'root',
+    path: '/',
+    component: PhotoApp
+  }
 
 ]
 
