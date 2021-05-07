@@ -1,4 +1,12 @@
-# vue_photos
+#Vue_photos
+
+## Проект по работе с API
+
+## В проекте использовались Vue3, vuex, vue-router.
+## Реализовано: запрос к сайту (jsonplaceholder.typicode.com), загрузка списка альбомов, загрузка фотографий из альбома, динамические url адреса, кеширование данных для ускорения работы приложения.
+
+
+## ![Imgur](https://i.imgur.com/dlmjjdv.gif)
 
 ## Project setup
 ```
